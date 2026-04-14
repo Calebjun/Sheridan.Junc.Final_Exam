@@ -1,0 +1,169 @@
+/* ── Container ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.status-msg {
+  font-size: 1.1rem;
+  margin-top: 60px;
+  color: var(--text);
+}
+.status-msg.error {
+  color: #ef4444;
+}
+
+/* ── Table ── */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+tbody tr {
+  transition: background 0.15s;
+}
+tbody tr:nth-child(even) {
+  background: var(--code-bg);
+}
+tbody tr:hover {
+  background: var(--accent-bg);
+}
+
+td {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.dish-name {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.center {
+  text-align: center;
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.badge.cuisine {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.badge.rating.high {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge.rating.mid {
+  background: #fef9c3;
+  color: #854d0e;
+}
+.badge.rating.low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ── Availability dot ── */
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.dot.green {
+  background: #22c55e;
+}
+.dot.red {
+  background: #ef4444;
+}
+
+/* ── Dark-mode badge overrides ── */
+@media (prefers-color-scheme: dark) {
+  .badge.cuisine {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+  }
+  .badge.rating.high {
+    background: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+  }
+  .badge.rating.mid {
+    background: rgba(234, 179, 8, 0.15);
+    color: #fde047;
+  }
+  .badge.rating.low {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+  }
+  .table-wrapper {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .container {
+    padding: 20px 10px 40px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  th, td {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+  }
+}
